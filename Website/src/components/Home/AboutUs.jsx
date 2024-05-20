@@ -12,16 +12,20 @@ const AboutUs = ({ ref }) => {
     element?.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <section ref={ref} className="py-4 w-full mx-auto max-w-6xl" id="projects">
+    <section
+      ref={ref}
+      className="py-4 w-[90%] lg:w-full mx-auto max-w-6xl"
+      id="projects"
+    >
       <p className="text-3xl font-bold mt-3 mb-6">About Us</p>
-      <section className="flex justify-evenly items-start flex-col md:flex-row gap-x-4">
-        <div className="md:w-[48%] w-[90%] mx-auto mb-10 md:mb-0">
+      <section className="flex justify-evenly items-start flex-col lg:flex-row gap-x-4">
+        <div className="lg:w-[48%] w-[90%] mx-auto mb-10 md:mb-0">
           <img src={HomeAbout} alt="" className="object-cover" />
           <div className="mt-4">
-            <p className="text-[#0E4316] font-bold text-3xl">
+            <p className=" text-white md:text-[#0E4316] font-bold text-3xl">
               Smart Living Spaces
             </p>
-            <p className="text-[#0E4316] mb-2 font-medium">
+            <p className=" text-white md:text-[#0E4316] mb-2 font-medium">
               The Magic of Your Dream Home Begins With us
             </p>
             <p className="text-sm">
@@ -42,7 +46,7 @@ const AboutUs = ({ ref }) => {
             </button>
           </div>
         </div>
-        <div className="md:w-[48%] w-[90%] mx-auto">
+        <div className="lg:w-[48%] w-full md:grid md:mt-10 lg:mt-0 lg:flex flex-col grid-cols-2 gap-x-4 mx-auto">
           <AboutProjectComp
             path={"/completed-projects"}
             title="Completed Projects"
@@ -80,7 +84,7 @@ export const AboutProjectComp = ({ title, subtitle, image, path }) => {
   return (
     <Link
       to={path}
-      className="flex justify-start items-start border p-4 shadow-sm rounded-md mb-4 cursor-pointer group hover:bg-black transition-animate"
+      className="flex justify-start items-start md:border p-4 shadow-sm rounded-md mb-4 cursor-pointer group hover:bg-black transition-animate"
     >
       <img
         src={image}

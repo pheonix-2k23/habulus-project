@@ -40,8 +40,8 @@ const CompletedProject = () => {
   };
 
   return (
-    <main>
-      <section className="h-[90vh] w-full relative">
+    <main className="bg-black md:bg-white">
+      <section className="h-[90vh] mt-12 w-full relative">
         <Link
           to={"/"}
           className="text-white absolute top-6 left-6 z-20 text-2xl"
@@ -64,7 +64,7 @@ const CompletedProject = () => {
       </section>
       <section className="w-full my-10">
         {!loading && (
-          <div className="grid md:grid-cols-3 w-[90%] md:w-full gap-8 mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-full gap-8 mx-auto max-w-6xl">
             {data &&
               data.slice(0, visibleProjects).map((item) => {
                 return (
@@ -109,24 +109,26 @@ const CompletedProject = () => {
           </button>
         )}
       </section>
-      <section className="max-w-6xl mx-auto">
-        <div className="w-[90%] mx-auto bg-white shadow-2xl rounded-3xl border px-10 py-14 my-14">
-          <p className="font-bold text-2xl uppercase mb-3">
+      <section className="max-w-6xl mx-auto pb-10">
+        <div className="w-full md:w-[90%] mx-auto bg-black md:bg-white shadow-2xl rounded-3xl md:border px-10 py-14">
+          <p className="font-bold text-2xl uppercase mb-3 text-white md:text-black">
             Our Completed Projects: A Testament to Excellence
           </p>
-          <p className="font-medium text-justify uppercase mb-6">
+          <p className="font-medium text-white md:text-black text-justify mb-6">
             At Habulus Groups, we take pride in turning dreams into reality. Our
             commitment to quality craftsmanship, innovative design, and customer
             satisfaction shines through in every completed project. Today, we
             are thrilled to announce the successful sell-out of all apartments
             in our latest development.
           </p>
-          <Link
-            to="/view-2D3D"
-            className="border bg-black border-white text-white px-6 py-2 rounded-md"
-          >
-            Explore Now
-          </Link>
+          <div className="flex justify-center md:justify-start">
+            <Link
+              to="/view-2D3D"
+              className="border bg-white md:bg-black  border-black md:border-white text-black md:text-white px-6 py-2 rounded-md"
+            >
+              Explore Now
+            </Link>
+          </div>
         </div>
       </section>
     </main>

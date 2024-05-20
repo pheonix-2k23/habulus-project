@@ -19,7 +19,7 @@ const Navbar = () => {
 
   return (
     <section
-      className={`md:shadow-md py-2 flex justify-between items-center px-8`}
+      className={`fixed top-0 left-0 w-full z-[100] bg-white md:shadow-md py-2 flex justify-between items-center px-8`}
     >
       <Link to={"/"}>
         <img

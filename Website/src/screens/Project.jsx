@@ -15,11 +15,11 @@ const Project = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main className="flex justify-start w-full flex-col">
+    <main className="flex mt-12 justify-start w-full flex-col bg-black md:bg-white text-white md:text-black">
       <section className=" w-full relative">
         <Link
           to={"/" + state}
-          className="text-black absolute top-6 left-6 z-20 text-2xl"
+          className="text-white md:text-black absolute top-6 left-6 z-20 text-2xl"
         >
           <FaArrowLeft />
         </Link>

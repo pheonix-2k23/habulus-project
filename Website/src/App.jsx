@@ -14,7 +14,7 @@ import View360 from "./screens/360-View";
 import View2D3D from "./screens/2D-3D";
 
 const App = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
   return (
     <>
       <BrowserRouter>

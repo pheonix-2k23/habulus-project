@@ -41,14 +41,14 @@ const LatestUpdate = () => {
           src={MEDIA_LINK + image}
           className="w-full h-[220px] object-cover"
         />
-        <p className="my-2">{title}</p>
+        <p className="my-2 text-black">{title}</p>
         <div className="flex justify-start items-center flex-wrap gap-4">
           {updates &&
             updates.map((item) => {
               return (
                 <span
                   key={title + item}
-                  className="bg-[#D9D9D9] px-2 py-1 rounded-full text-xs"
+                  className="bg-[#D9D9D9] text-black px-2 py-1 rounded-full text-xs"
                 >
                   {item}
                 </span>

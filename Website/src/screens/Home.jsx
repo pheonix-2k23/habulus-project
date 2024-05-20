@@ -12,7 +12,10 @@ import AnyQuestion from "../components/Home/AnyQuestion";
 
 const Home = () => {
   return (
-    <main className="flex justify-start w-full flex-col" id="home">
+    <main
+      className="flex bg-black md:bg-white text-white md:text-black justify-start w-full flex-col"
+      id="home"
+    >
       <Hero />
       <AboutUs />
       <OurTeam />

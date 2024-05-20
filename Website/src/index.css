@@ -23,3 +23,7 @@
   transition-timing-function: ease-linear;
   transition-duration: 200ms;
 }
+
+.company-scroll::-webkit-scrollbar {
+  display: none;
+}

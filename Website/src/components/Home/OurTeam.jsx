@@ -3,7 +3,7 @@ import TeamImageBg from "../../assets/team.png";
 
 const OurTeam = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto relative h-[180px] flex justify-center items-center mt-10">
+    <section className="w-full hidden max-w-6xl mx-auto relative h-[180px] md:flex justify-center items-center mt-10">
       <div className="absolute left-0 w-full">
         <img
           src={TeamImageBg}

@@ -39,7 +39,7 @@ const Advertisement = () => {
         <div>
           <img
             src={MEDIA_LINK + data[count].image}
-            className="w-full cursor-pointer h-[100vh] object-cover"
+            className="w-full cursor-pointer md:h-[100vh] object-cover"
             alt="Advertisement"
           />
           <div className="absolute bottom-4 bg-white p-2 rounded-full left-1/2 transform -translate-x-1/2 flex space-x-2">

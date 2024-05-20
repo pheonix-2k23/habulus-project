@@ -54,7 +54,7 @@ const Testimonials = () => {
       <p className="text-center mt-3">
         Hear what our satisfied clients have to say about our services.
       </p>
-      <div className="grid md:grid-cols-3 place-items-center gap-6 mt-10">
+      <div className="grid lg:grid-cols-3 place-items-center gap-6 mt-10 md:w-auto">
         {!loading &&
           data &&
           data

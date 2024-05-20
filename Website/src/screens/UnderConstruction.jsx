@@ -40,8 +40,8 @@ const UnderConstruction = () => {
   };
 
   return (
-    <main>
-      <section className="h-[90vh] w-full relative">
+    <main className="bg-black md:bg-white">
+      <section className="h-[90vh] mt-12 w-full relative">
         <Link
           to={"/"}
           className="text-white absolute top-6 left-6 z-20 text-2xl"
@@ -58,18 +58,19 @@ const UnderConstruction = () => {
         ></video>
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
         <div className="relative mx-auto h-full w-[90%] flex justify-end items-end flex-col z-10 pb-14">
-          <p className="text-4xl text-white font-bold w-[70%] text-right ml-auto leading-[50px]">
+          <p className="text-3xl md:text-4xl text-white font-bold md:w-[70%] text-center md:text-right ml-auto leading-[40px] md:leading-[50px]">
             Sneak Peek: Your Future Home Unfolding - Under Construction with
             Habulus Groups
           </p>
-          <p className="text-white w-full text-right ml-auto mt-4">
+          <p className="text-white w-full text-center md:text-right ml-auto mt-4">
             Displaying our Under Construction projects to dream your home
           </p>
         </div>
       </section>
       <section className="w-full my-10">
         {!loading && (
-          <div className="grid grid-cols-3 gap-8 mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-full gap-8 mx-auto max-w-6xl">
+            {" "}
             {data &&
               data.map((item) => {
                 return (
@@ -115,11 +116,11 @@ const UnderConstruction = () => {
         </button>
       )}
       <section className="max-w-6xl mx-auto">
-        <div className="w-[100%] mx-auto bg-white px-10 py-14 my-14">
-          <p className="font-bold text-4xl uppercase mb-5">
+        <div className="w-[100%] mx-auto bg-black md:bg-white px-4 md:px-10 py-14 ">
+          <p className="font-bold text-3xl md:text-4xl text-white md:text-black uppercase mb-5">
             Embark on Your Home&apos;s Journey with Habulus Groups
           </p>
-          <p className="font-medium text-justify mb-2">
+          <p className="font-medium text-justify text-white md:text-black mb-2">
             At Habulus Groups, we believe that the magic of creating your dream
             home lies not only in the finished product but also in the journey
             of its construction. We&apos;re thrilled to provide an exclusive

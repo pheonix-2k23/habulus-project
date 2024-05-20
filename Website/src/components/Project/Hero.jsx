@@ -23,7 +23,7 @@ const Main = ({ id }) => {
   }, [id]);
 
   return (
-    <section className="md:min-h-[90vh] container mx-auto flex justify-center items-center w-full flex-col pt-20 md:py-14">
+    <section className="lg:min-h-[90vh] container mx-auto flex justify-center items-center w-full flex-col pt-20 lg:py-14">
       {data && (
         <>
           <img

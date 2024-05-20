@@ -6,7 +6,7 @@ const Faq = () => {
   return (
     <section className="w-full pb-12">
       <p className="font-bold text-3xl text-center mb-10">FAQ&apos;s</p>
-      <div className="md:w-[60%] w-[90%] mx-auto">
+      <div className="lg:w-[60%] w-[90%] mx-auto">
         <Accordian
           index={1}
           setOpen={setOpen}

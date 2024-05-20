@@ -9,7 +9,7 @@ const ImageList = ({ image, list }) => {
         alt=""
         className="w-[90%] md:w-[50%] aspect-square object-cover"
       />
-      <ul className="md:w-[50%] w-[90%] mt-4 md:mt-0 md:pl-10">
+      <ul className="flex flex-wrap gap-x-4 justify-center md:block md:w-[50%] w-[90%] mt-4 md:mt-0 md:pl-10">
         {list &&
           list.map((item, index) => {
             return (

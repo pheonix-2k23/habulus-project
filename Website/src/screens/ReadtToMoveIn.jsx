@@ -41,8 +41,8 @@ const ReadyToMoveIn = () => {
   };
 
   return (
-    <main>
-      <section className="h-[90vh] w-full relative">
+    <main className="bg-black md:bg-white">
+      <section className="h-[90vh] mt-12 w-full relative">
         <Link
           to={"/"}
           className="text-white absolute top-6 left-6 z-20 text-2xl"
@@ -60,17 +60,18 @@ const ReadyToMoveIn = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
 
         <div className="relative w-[90%] mx-auto h-full flex justify-center items-center flex-col z-10">
-          <p className="text-5xl text-white font-bold w-full text-left">
+          <p className=" text-3xl md:text-5xl text-white font-bold w-full text-center md:text-left">
             A Ready-to-Move-In Marvel by Habulus Groups
           </p>
-          <p className="text-white w-full text-lg text-left mx-auto mt-4">
+          <p className="text-white w-full text-lg text-center md:text-left mx-auto mt-4">
             Just Buy Your Dream home
           </p>
         </div>
       </section>
       <section className="w-full my-10">
         {!loading && (
-          <div className="grid grid-cols-3 gap-8 mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 w-[90%] lg:w-full gap-8 mx-auto max-w-6xl">
+            {" "}
             {data &&
               data.slice(0, visibleProjects).map((item) => {
                 return (
@@ -115,12 +116,12 @@ const ReadyToMoveIn = () => {
           Show Less
         </button>
       )}
-      <section className="max-w-6xl mx-auto">
-        <div className="w-[90%] mx-auto bg-white px-10 py-14 my-14">
-          <p className="font-bold text-2xl uppercase mb-3">
+      <section className="max-w-6xl mx-auto ">
+        <div className="md:w-[90%] mx-auto  bg-black md:bg-white px-4 md:px-10 py-14">
+          <p className="font-bold text-2xl uppercase  text-white md:text-black mb-3">
             Immerse Yourself in a 360-Degree Experience
           </p>
-          <p className="font-medium text-justify mb-10">
+          <p className="font-medium text-justify  text-white md:text-black mb-10">
             At Habulus Groups, we believe that the journey to your dream home
             should be as immersive as the living experience itself. Introducing
             our state-of-the-art 360-degree view technology, we invite you to
@@ -132,16 +133,19 @@ const ReadyToMoveIn = () => {
             of your device. It&apos;s like being inside your home before
             it&apos;s even built.
           </p>
-          <Link
-            to={"/view-360"}
-            className="border bg-black border-white text-white px-6 py-2 rounded-md mt-4"
-          >
-            360 view
-          </Link>
+
+          <div className="flex justify-center md:justify-start">
+            <Link
+              to={"/view-360"}
+              className="border bg-white md:bg-black  border-black md:border-white text-black md:text-white px-6 py-2 rounded-md"
+            >
+              360 view
+            </Link>
+          </div>
           <img
             src={ImageOne}
             alt=""
-            className="w-full mx-auto mt-10 rounded object-cover"
+            className="w-full mx-auto mt-10 rounded hidden md:block object-cover"
           />
         </div>
       </section>

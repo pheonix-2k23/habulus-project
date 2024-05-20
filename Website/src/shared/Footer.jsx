@@ -22,7 +22,7 @@ const Footer = () => {
       {location.pathname === "/" && (
         <img
           src={Animation}
-          className="absolute z-50 -top-[195px] -left-[90px] w-[460px]"
+          className="absolute z-50 -top-[180px] md:-top-[195px] -left-[90px] w-[460px]"
         />
       )}
       <video
@@ -79,23 +79,25 @@ const Footer = () => {
               Contact Us
             </li>
           </div>
-          <div className="w-[50%] md:w-full flex justify-start text-left self-start relative z-10 flex-col">
+          <div className="w-full flex justify-start text-left self-start relative z-10 flex-col">
             <p className="flex mb-5 mt-10 md:mt-0 md:ml-8 text-2xl font-semibold text-white">
               CONTACT DETAILS
             </p>
-            <p className="md:ml-8 text-white text-xl mt-0 pl-6">Address :- </p>
-            <p className="md:ml-8 text-xl w-[80%] text-white pl-6 hover:text-[#FAFF00] cursor-pointer">
+            <p className="md:ml-8 text-white text-xl mt-0 md:pl-6">
+              Address :-{" "}
+            </p>
+            <p className="md:ml-8 text-xl  md:w-[80%] text-white md:pl-6 hover:text-[#FAFF00] cursor-pointer">
               Flat no 501,Site No 1482,1483, sri nilaya residency 2, deccan
               palms layout,Ananth nagar,electronic city phase
               2,Bengaluru(Bangalore) urban, karnataka ,560100
             </p>
-            <p className="md:ml-8 text-white pl-6 text-xl mt-2">
+            <p className="md:ml-8 text-white md:pl-6 text-xl mt-2">
               Email -{" "}
               <span className="hover:text-[#FAFF00] text-xl cursor-pointer">
                 enquiry@habulus.com
               </span>
             </p>
-            <p className="md:ml-8 text-white pl-6 text-xl mt-2">
+            <p className="md:ml-8 text-white md:pl-6 text-xl mt-2">
               Phone - +91 8989899393
             </p>
           </div>
@@ -113,7 +115,7 @@ const Footer = () => {
           </div>
           <div className="flex gap-4">
             <FaFacebook size={24} className="cursor-pointer text-white" />
-            <FaYoutube size={24} className="cursor-pointer text-white" />
+            <FaYoutube size={26} className="cursor-pointer text-white" />
             <FaInstagram size={24} className="cursor-pointer text-white" />
           </div>
         </div>

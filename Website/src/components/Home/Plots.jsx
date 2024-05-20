@@ -11,7 +11,7 @@ import FacilityManagement from "../../assets/plot/facility management.png";
 const Plots = () => {
   return (
     <section
-      className="w-full py-12 max-w-6xl mx-auto flex gap-x-6 flex-col md:flex-row"
+      className="w-full py-12 max-w-6xl md:w-[90%] mx-auto flex gap-x-6 flex-col md:flex-row"
       id="property"
     >
       <div className="w-[90%] md:w-[40%] mx-auto">

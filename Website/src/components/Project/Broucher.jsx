@@ -31,13 +31,13 @@ const Broucher = ({ id }) => {
   }, [id]);
 
   return (
-    <section className="flex flex-col justify-start items-center h-[70vh] py-24 px-4">
+    <section className="flex flex-col justify-start items-center h-[50vh] lg:h-[70vh] py-24 px-4">
       <div className="w-full text-center mb-10">
         <Title title={"BROUCHER"} />
       </div>
       {data && project && (
         <a
-          className="bg-[#e2e2e2] max-w-6xl py-4 px-8 w-[90%] md:w-[80%] rounded-md shadow-md flex justify-between items-center cursor-pointer hover:scale-105 transition-animate"
+          className="bg-[#e2e2e2] text-black max-w-6xl py-4 px-8 w-[90%] md:w-[80%] rounded-md shadow-md flex justify-between items-center cursor-pointer hover:scale-105 transition-animate"
           href={MEDIA_LINK + data.pdf}
           target="_blank"
         >

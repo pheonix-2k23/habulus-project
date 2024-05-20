@@ -8,17 +8,17 @@ function View360() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main>
-      <section className="w-full relative">
+    <main className="bg-black md:bg-white text-white md:text-black">
+      <section className="w-full mt-12 relative">
         <Link
           to={"/ready-to-move-in"}
-          className="text-black absolute top-6 left-6 z-20 text-2xl"
+          className="md:text-black text-white  absolute top-6 left-6 z-20 text-2xl"
         >
           <FaArrowLeft />
         </Link>
       </section>
       <section className="py-4 w-full mx-auto max-w-6xl">
-        <div className=" w-full px-16 py-10 text-justify ">
+        <div className=" w-full px-6 md:px-16 py-10 text-justify ">
           <p className="text-4xl font-bold w-full">
             Our construction and completed projects
           </p>
@@ -55,7 +55,7 @@ function View360() {
       ></iframe>
 
       <section className=" py-4 w-full mx-auto max-w-6xl">
-        <div className="w-full px-16 py-10">
+        <div className="w-full px-6 md:px-16 py-10">
           <p className="font-bold text-4xl mb-3">
             360-Degree Room View: Step Inside Your Future Home with Habulus
             Groups
