@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Title from "./../../shared/Project/Title";
 import { API_LINK, MEDIA_LINK } from "../../utils/api";
 import axios from "axios";
+import { CiLocationOn } from "react-icons/ci";
 
 const Main = ({ id }) => {
   const [data, setData] = useState({
@@ -34,6 +35,12 @@ const Main = ({ id }) => {
           <div className="w-[90%] md:w-[65%] flex justify-center items-center flex-col my-8 md:my-6">
             <Title title={data && data.title} />
             <p className="mt-4 text-justify">{data && data.description}</p>
+            <p className="mt-4 flex justify-center text-justify md:items-center">
+              <span className="mr-2 mt-0 md:mt-0">
+                <CiLocationOn className="text-xl md:text-2xl" />
+              </span>
+              {data && data.location}
+            </p>
           </div>
         </>
       )}
