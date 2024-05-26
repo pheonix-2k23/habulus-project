@@ -14,7 +14,7 @@ const Plots = () => {
       className="w-full py-12 max-w-6xl md:w-[90%] mx-auto flex gap-x-6 flex-col md:flex-row"
       id="property"
     >
-      <div className="w-[90%] md:w-[40%] mx-auto">
+      <div className="hidden md:block w-[90%] md:w-[40%] mx-auto ">
         <div className="relative flex justify-center items-center mb-6">
           <div className="bg-black/0 w-full h-[230px] absolute z-20 flex justify-center items-center flex-col">
             <button className="border bg-white text-black px-6 py-2 rounded-md mt-4">
@@ -26,7 +26,7 @@ const Plots = () => {
           </div>
           <img src={Plot1} className="h-[300px] w-full object-cover" alt="" />
         </div>
-        <div className="relative flex justify-center items-center">
+        <div className="hidden md:block relative justify-center items-center">
           <div className="bg-black/0 w-full h-[300px] absolute z-20 flex justify-center items-center flex-col">
             <button className="border bg-white text-black px-6 py-2 rounded-md mt-4">
               View
@@ -39,16 +39,18 @@ const Plots = () => {
         </div>
       </div>
       <div className="w-[90%] md:w-[60%] mx-auto">
-        <div className="relative flex justify-center items-center mb-6">
-          <div className="bg-black/0 w-full h-[230px] absolute z-20 flex justify-center items-center flex-col">
-            <button className="border bg-white text-black px-6 py-2 rounded-md mt-4">
-              View
-            </button>
-            <p className="text-white mt-3 w-[85%] text-center">
-              Click to view more Villa plots with our best collections{" "}
-            </p>
+        <div className="hidden md:block">
+          <div className="relative flex justify-center items-center mb-6">
+            <div className="bg-black/0 w-full h-[230px] absolute z-20 flex justify-center items-center flex-col">
+              <button className="border bg-white text-black px-6 py-2 rounded-md mt-4">
+                View
+              </button>
+              <p className="text-white mt-3 w-[85%] text-center">
+                Click to view more Villa plots with our best collections{" "}
+              </p>
+            </div>
+            <img src={Plot2} className="h-[300px] w-full object-cover" alt="" />
           </div>
-          <img src={Plot2} className="h-[300px] w-full object-cover" alt="" />
         </div>
         <div>
           <Component
@@ -86,7 +88,7 @@ export default Plots;
 
 export const Component = ({ title, subtitle, image, path }) => {
   return (
-    <div className="flex justify-start items-start border p-4 shadow-sm rounded-md mb-4">
+    <div className="flex justify-start items-start md:border p-4 shadow-sm rounded-md mb-4">
       <img
         src={image}
         alt=""

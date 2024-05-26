@@ -8,6 +8,48 @@ import HabulusHomes from "../../assets/partner companies/habulus homes pvt.png";
 const Companies = () => {
   const scrollRef = useRef(null);
 
+  // useEffect(() => {
+  //   const scrollContainer = scrollRef.current;
+  //   const scrollSpeed = 1;
+  //   let scrollInterval;
+
+  //   const startScrolling = () => {
+  //     scrollInterval = setInterval(() => {
+  //       if (scrollContainer) {
+  //         scrollContainer.scrollLeft += scrollSpeed;
+  //         if (
+  //           scrollContainer.scrollLeft + scrollContainer.clientWidth >=
+  //           scrollContainer.scrollWidth
+  //         ) {
+  //           scrollContainer.scrollLeft = 0;
+  //         }
+  //       }
+  //     }, 30);
+  //   };
+
+  //   const stopScrolling = () => {
+  //     if (scrollInterval) {
+  //       clearInterval(scrollInterval);
+  //     }
+  //   };
+
+  //   const handleResize = () => {
+  //     if (window.innerWidth < 1024) {
+  //       startScrolling();
+  //     } else {
+  //       stopScrolling();
+  //     }
+  //   };
+
+  //   handleResize();
+  //   window.addEventListener("resize", handleResize);
+
+  //   return () => {
+  //     stopScrolling();
+  //     window.removeEventListener("resize", handleResize);
+  //   };
+  // }, []);
+
   useEffect(() => {
     const scrollContainer = scrollRef.current;
     const scrollSpeed = 1;
@@ -17,10 +59,7 @@ const Companies = () => {
       scrollInterval = setInterval(() => {
         if (scrollContainer) {
           scrollContainer.scrollLeft += scrollSpeed;
-          if (
-            scrollContainer.scrollLeft + scrollContainer.clientWidth >=
-            scrollContainer.scrollWidth
-          ) {
+          if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
             scrollContainer.scrollLeft = 0;
           }
         }
