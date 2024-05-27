@@ -48,32 +48,32 @@ const Navbar = () => {
         } px-2 sm:flex sm:p-0 w-full md:[45%] sm:h-[32%] sm:w-auto transition-all duration-300 ease-in-out bg-white-900 sm:bg-transparent md:justify-end justify-center items-center flex-col md:flex-row select-none`}
       >
         <Link
-          className="block p-3 mx-3 md:w-auto  text-black text-lg md:text-base cursor-pointer text-center   md:hover:text-blue-500 md:hover:bg-transparent hover:bg-blue-500 mt-0 font-semibold"
+          className="block p-3 mx-3 md:w-auto w-full text-black text-lg md:text-base cursor-pointer text-center   md:hover:text-blue-500 md:hover:bg-transparent hover:bg-[#509FCF] mt-0 font-semibold"
           to="/#"
           onClick={() => handleItemClick("home")}
         >
           Home
         </Link>
         <li
-          className=" block p-3 mx-3 md:w-auto  text-black  text-center text-lg md:text-base cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-blue-500 mt-0 font-semibold "
+          className=" block p-3 mx-3 md:w-auto w-full text-black  text-center text-lg md:text-base cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-[#509FCF] mt-0 font-semibold "
           onClick={() => handleItemClick("companies")}
         >
           Companies
         </li>
         <li
-          className=" block p-3 mx-3 md:w-auto  text-black text-lg md:text-base text-center cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-blue-500 mt-0 font-semibold "
+          className=" block p-3 mx-3 md:w-auto w-full text-black text-lg md:text-base text-center cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-[#509FCF] mt-0 font-semibold "
           onClick={() => handleItemClick("projects")}
         >
           Projects
         </li>
         <li
-          className=" block p-3 mx-3 md:w-auto  text-black text-lg md:text-base text-center cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-blue-500 mt-0 font-semibold"
+          className=" block p-3 mx-3 md:w-auto w-full text-black text-lg md:text-base text-center cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-[#509FCF] mt-0 font-semibold"
           onClick={() => handleItemClick("property")}
         >
           Property
         </li>
         <li
-          className=" block p-3 mx-3 md:w-auto  text-black text-lg md:text-base text-center cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-blue-500 mt-0 font-semibold "
+          className=" block p-3 mx-3 md:w-auto w-full text-black text-lg md:text-base text-center cursor-pointer  md:hover:text-blue-500 md:hover:bg-transparent hover:bg-[#509FCF] mt-0 font-semibold "
           onClick={() => handleItemClick("contact")}
         >
           Contact Us

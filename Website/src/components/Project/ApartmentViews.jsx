@@ -11,7 +11,7 @@ const ApartmentViews = ({ id }) => {
     <section className="lg:min-h-[100vh] flex justify-start items-center w-full flex-col bg-[#222121] md:bg-[#d9d9d9] py-14">
       <div className="w-full container flex justify-center items-center flex-col">
         <Title title={"APARTMENT VIEWS"} />
-        <div className="grid grid-cols-3 my-7 w-[90%] lg:w-[50%] gap-6">
+        <div className="grid grid-cols-3 my-7 w-[90%] lg:w-[50%] gap-3">
           <Button
             title={"Plans"}
             active={active === "Plans"}
