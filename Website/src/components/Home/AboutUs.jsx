@@ -6,15 +6,14 @@ import AboutUnderConstImage from "../../assets/company projects/underconstructio
 import AboutReadtToMoveIn from "../../assets/company projects/ready to move in.png";
 import AboutUpcomingImage from "../../assets/company projects/upcoming.png";
 
-const AboutUs = ({ ref }) => {
+const AboutUs = ({ refs }) => {
   const handleItemClick = (itemName) => {
     const element = document.getElementById(itemName) || null;
     element?.scrollIntoView({ behavior: "smooth" });
   };
   return (
     <section
-      ref={ref}
-      className="py-4 w-[90%] lg:w-full mx-auto max-w-6xl"
+      className="py-4 w-[90%] lg:w-full mx-auto max-w-6xl md:block hidden"
       id="projects"
     >
       <p className="text-3xl font-bold mt-3 mb-6">About Us</p>

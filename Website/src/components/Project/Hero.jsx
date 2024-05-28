@@ -40,6 +40,7 @@ const Main = ({ id }) => {
                 <CiLocationOn className="text-xl md:text-2xl" />
               </span>
               {data && data.location}
+                          
             </p>
           </div>
         </>

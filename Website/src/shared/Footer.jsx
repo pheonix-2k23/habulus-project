@@ -5,19 +5,30 @@ import Animation from "../assets/footer/footer.gif";
 import logo from "../assets/logo.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-const Footer = () => {
+const Footer = ({ refs }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const handleItemClick = (itemName) => {
-    if (location.pathname !== "/") navigate("/");
-    const element = document.getElementById(itemName) || null;
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleItemClick = (itemName, ref) => {
+    if (location.pathname !== "/") {
+      navigate("/");
+    }
+    const isMobileOrTablet = window.innerWidth <= 768;
+    if (ref && isMobileOrTablet) {
+      window.open(`/#${itemName}`, "_self");
+      ref.current?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    } else {
+      if (ref) {
+        ref.current?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      }
+    }
   };
+
   return (
     <section
       className="min-h-screen flex flex-col justify-start items-center relative"
       id="contact"
+      ref={refs.contactRef}
     >
       {location.pathname === "/" && (
         <img
@@ -50,31 +61,31 @@ const Footer = () => {
             </p>
             <li
               className="mb-2 text-xl font-medium cursor-pointer list-none text-white"
-              onClick={() => handleItemClick("home")}
+              onClick={() => handleItemClick("home", refs.homeRef)}
             >
               Home
             </li>
             <li
               className="mb-2 text-xl font-medium cursor-pointer list-none text-white"
-              onClick={() => handleItemClick("companies")}
+              onClick={() => handleItemClick("companies", refs.companiesRef)}
             >
               Companies
             </li>
             <li
               className="mb-2 text-xl font-medium cursor-pointer list-none text-white"
-              onClick={() => handleItemClick("projects")}
+              onClick={() => handleItemClick("projects", refs.aboutRef)}
             >
               Project
             </li>
             <li
               className="mb-2 text-xl font-medium cursor-pointer list-none text-white"
-              onClick={() => handleItemClick("property")}
+              onClick={() => handleItemClick("property", refs.propertyRef)}
             >
               Property
             </li>
             <li
               className="mb-2 text-xl font-medium cursor-pointer list-none text-white"
-              onClick={() => handleItemClick("contact")}
+              onClick={() => handleItemClick("contact", refs.contactRef)}
             >
               Contact Us
             </li>

@@ -82,7 +82,7 @@ const UpcomingProjects = () => {
                         src={MEDIA_LINK + item.image}
                         className="w-full h-[320px] object-cover rounded-md"
                       />
-                      <div className="absolute bottom-0 p-4 translate-y-72 group-hover:translate-y-0 rounded-t-2xl bg-white w-full z-20 transition-animate">
+                      <div className="absolute bottom-0 p-4 lg:translate-y-72 lg:group-hover:translate-y-0 rounded-t-2xl bg-white w-full z-20 transition-animate">
                         <p className="font-semibold">{item.title}</p>
                         <p className="line-clamp-2 text-xs mt-1">
                           {item.description}

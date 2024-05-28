@@ -9,7 +9,7 @@ import Home7 from "../../assets/image7.png";
 import IntroImage from "../../assets/Front photo.jpg";
 import { AiFillCloseSquare, AiOutlineClose } from "react-icons/ai";
 
-const Hero = () => {
+const Hero = ({ refs }) => {
   const [count, setCount] = useState(0);
   const [showIntro, setShowIntro] = useState(true);
   const [data, setData] = useState([
@@ -62,9 +62,16 @@ const Hero = () => {
     return () => clearInterval(intervalId);
   }, [data.length]);
 
-  const handleItemClick = (itemName) => {
-    const element = document.getElementById(itemName) || null;
-    element?.scrollIntoView({ behavior: "smooth" });
+  const handleItemClick = (itemName, ref) => {
+    const isMobileOrTablet = window.innerWidth <= 768;
+    if (ref && isMobileOrTablet) {
+      window.open(`/#${itemName}`, "_self");
+      ref.current?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+    } else {
+      if (ref) {
+        ref.current?.scrollIntoView({ behavior: "smooth", inline: "nearest" });
+      }
+    }
   };
 
   const handleCloseIntro = () => {
@@ -120,7 +127,7 @@ const Hero = () => {
           </div>
         </div>
       )}
-      <section className="bg-black w-full flex justify-center items-center flex-col py-16">
+      <section className="bg-black w-full justify-center items-center flex-col py-16 hidden md:flex">
         <p className="text-white text-center font-medium text-2xl md:text-3xl">
           Welcome to our <br /> Construction Field website!
         </p>
@@ -130,13 +137,13 @@ const Hero = () => {
         <div className="gap-x-4 flex">
           <button
             className="border border-white text-white px-6 py-2 rounded-md text-sm"
-            onClick={() => handleItemClick("contact")}
+            onClick={() => handleItemClick("contact", refs.contactRef)}
           >
             Contact Us
           </button>
           <button
             className="bg-white border border-white text-black px-6 py-2 rounded-md text-sm"
-            onClick={() => handleItemClick("projects")}
+            onClick={() => handleItemClick("projects", refs.aboutRef)}
           >
             Learn More
           </button>

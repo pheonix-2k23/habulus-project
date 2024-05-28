@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./screens/Home";
 import Project from "./screens/Project";
@@ -15,12 +15,38 @@ import View2D3D from "./screens/2D-3D";
 
 const App = () => {
   const [open, setOpen] = useState(true);
+  const homeRef = useRef(null);
+  const companiesRef = useRef(null);
+  const propertyRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
   return (
     <>
       <BrowserRouter>
-        <Navbar />
+        <Navbar
+          refs={{
+            homeRef,
+            companiesRef,
+            propertyRef,
+            contactRef,
+            aboutRef,
+          }}
+        />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                refs={{
+                  homeRef,
+                  companiesRef,
+                  propertyRef,
+                  contactRef,
+                  aboutRef,
+                }}
+              />
+            }
+          />
           <Route path="/project/:id" element={<Project />} />
           <Route path="/completed-projects" element={<CompletedProject />} />
           <Route path="/upcoming-projects" element={<UpcomingProject />} />
@@ -29,7 +55,15 @@ const App = () => {
           <Route path="/view-360" element={<View360 />} />
           <Route path="/view-2D3D" element={<View2D3D />} />
         </Routes>
-        <Footer />
+        <Footer
+          refs={{
+            homeRef,
+            companiesRef,
+            propertyRef,
+            contactRef,
+            aboutRef,
+          }}
+        />
         <div className="fixed bottom-10 right-10 z-40 flex flex-row-reverse justify-center items-center">
           <img
             src={WALogo}

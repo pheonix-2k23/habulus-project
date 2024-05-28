@@ -9,7 +9,6 @@ import Plots from "../components/Home/Plots";
 import LatestUpdate from "../components/Home/LatestUpdate";
 import Advertisement from "../components/Home/Advertisement";
 import AnyQuestion from "../components/Home/AnyQuestion";
-import AboutUsMobile from "../components/Home/AboutUsMobile";
 
 const Home = ({ refs }) => {
   return (
@@ -20,11 +19,8 @@ const Home = ({ refs }) => {
       <section ref={refs.homeRef}>
         <Hero refs={refs} />
       </section>
-      <section ref={refs.aboutRef}>
-        <AboutUs refs={refs} />
-      </section>
-      <section className="block md:hidden">
-        <AboutUsMobile refs={refs} />
+      <section ref={refs.aboutRef} className="md:block hidden">
+        <AboutUs />
       </section>
       <OurTeam />
       <section ref={refs.companiesRef}>
